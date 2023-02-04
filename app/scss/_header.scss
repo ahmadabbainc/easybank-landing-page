@@ -19,14 +19,35 @@
   .overlay {
     opacity: 0;
     position: fixed;
-    top: 3.75rem;
+    top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background: linear-gradient($darkBlue, transparent);
   }
+
   nav {
-    padding: 1.0625rem 1.5rem;
+    position: relative;
+    padding: 1.0625rem;
+    background: $white;
+  }
+
+  &__menu {
+    position: absolute;
+    display: block;
+    width: calc(100% - 3rem);
+    left: 50%;
+    transform: translateX(-50%);
+    background: $white;
+    margin-top: 1.5rem;
+    padding: 0 1.5rem;
+    border-radius: 5px;
+    a {
+      display: block;
+      padding: 0.625rem;
+      text-align: center;
+      color: $darkBlue;
+    }
   }
 
   &__logo {
